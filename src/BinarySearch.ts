@@ -27,7 +27,7 @@ export function search(array: any[], value: any, prop = "ticks"): number {
 			return midPoint;
 		} else if (event[prop] > value) {
 			// search lower
-			end = midPoint;
+			end = midPoint - 1; // Adjust end to narrow the search range
 		} else if (event[prop] < value) {
 			// search upper
 			beginning = midPoint + 1;
